@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Enginyeria del Programari</title>
+        <meta name="description" content="Seminari 1, Enginyeria del Programari">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+    <div class="header">
+            <h2>Enginyeria del Programari</h2>
+    </div>
+        <div class="menu">
+            
+            <div class="first">
+                <a href="#stakeholders"><p>Stakeholders</p></a>
+            </div>
+            
+            <div class="first">
+                <a href="#domain"><p>Domain requirements</p></a>
+            </div>
+            
+            <div class="first">
+                <a href="#use"><p>Use cases</p></a>
+            </div>
+            
+             <div class="first">
+                <a href="#cladia"><p>Diagrama de Clases</p></a>
+            </div>
+            
+            <div class="qs">
+                <a href="#quis"><p>Quien somos?</p></a>
+            </div>
+            
+        </div>
+        
+    <div class="seminari" id="#stakeholders">
+                 <h1>Stakeholders</h1>
+                 <p class="rta"> 
+            <br>
+            <strong>- FrobozzCo:</strong> por que son los creadores del proyecto.
+            <br>
+            <strong>- Profesor Notoriously Meticulous:</strong> por que es el inversor del proyecto.
+            <br>
+            <strong>- Organización estudiantil “Friends of the videogame”:</strong> por que colaboran directamente en la elaboración del proyecto.
+            <br>
+            <strong>- Desarrolladores:</strong> por que elaboran el codigo de todo el proyecto.
+            <br>
+            <strong>- Creator:</strong> por que contribuie en insertar los juegos que se podran ver en el proyecto web.
+            <br>
+            <strong>- Administrator:</strong> por que puede regular el contenido que se encuentra en el proyecto web.
+            <br>
+        </p>
+            </div>
+        <div class="seminari" id="domain">
+                 <h1>Domain requirements</h1>
+            <h3>Glossary</h3>
+                 <p class="rta"> 
+                     <strong>- Creator: </strong>persona que crea un juego que se pueda subir al proyecto web.
+            <br>
+            <strong>- Actor: </strong>persona que utiliza los servicios del proyecto.
+            <br>
+            <strong>- Admin: </strong>persona capaz de expulsar y administrar, juegos y creadores. 
+            <br>            
+                    <strong>-  Foro:</strong> Espacio en la Web donde los usuarios puede compartir su opinion y deliberar sobre juegos. <br>
+            <strong>- Testear:</strong> Actividad que solo puedes realizar los usuarios con derechos de Tester para dar una opinion sobre un juego recien añadido en la web.<br>
+            <strong>- Evaluar Juego:</strong> Actividad que pueden realizar todos los usuarios que se basa en dau una puntuacion de 0 al 5. <br>
+        </p>
+            <h3>Analysis</h3>
+            <p class="rta"> 
+                            · Para que la web funcione correctamente el usuario o player ha de tener un buscador web y flash player lo mas                       actualizado posible. <br>
+            · La pagina WEB y los JUEGOS deberan estar disponibles en varios idiomas para albergar el maximo publico posible.<br>
+            · El servidor donde va a estar alojado nuestro sistema debera ser capaz de gestionar muchas conexiones simultaneas.<br>
+            · El sitema debera ser capaz de ,en funcion de la edad del usuario, permitir o no jugar a un juego.<br>
+            · El sistema debera permitir o no comprar creditos en funcion de la edad.<br>
+            </p>
+            <h3>Diagrama Estatico.</h3>
+            
+		<div class="diagram"><img src="diagrama.png" ></div>
+          <h3>Diagrama de Estados.</h3>
+                <div class="diagram"><img src="Estados.png" ></div>   
+         <h3>Activity Diagram of Playing Game.</h3>
+        <div style="margin-left:10px"><img src="activity.png" ></div>
+        <h3>Sequential Diagram.</h3>
+        <div style="margin-left:10px"><img src="diagram1.png" ></div>
+            </div>
+          <div class="seminari" id="use">
+               <h1>Use case</h1>
+              <p class="rta">
+            <strong>COMPRAR EN LA TIENDA</strong><br><br>
+            <strong>Use case:</strong> Comprar en la tienda.
+            <br>
+            <strong>Context:</strong> El usuario quiere comprar en la tienda online.
+            <br>
+            <strong>Primary actors:</strong> User (incluye Jugador, Tester, Admin y Creadores.
+            <br>
+            <strong>Support actors:</strong> Metodos de pago (Paypal,Visa...).
+            <br>
+            <strong>Preconditions:</strong><br><br>
+            - Para comprar en la tienda hay que estar loggeado.
+            <br><br>
+            - Para comprar el usuario hay que tener un metodo de pago.
+            <br><br>
+            <strong>Succesful Postconditions:</strong><br><br>
+            - El usuario ha compradi creditos con dinero.
+            <br><br>
+            <strong>Unsuccessful postconditions:</strong><br><br>
+            - El usuario no ha podidio comprar creditos.
+            <br><br>
+            <strong>Basic Flow:</strong><br><br>
+            1 · El usuario ingresa en la tienda para comprar.
+            <br><br>
+            2 · El sistema pregunta cuantos creditos quiere comprar.
+            <br><br>
+            3 · El usuario selecciona la cantidad de creditos a comprar.
+            <br><br>
+            4 · El sistema pide el metodo de pago que quiere efectuar.
+            <br><br>
+            5 · El usuario elige el sistema de pago que quiere utilizar.
+            <br><br>
+            6 · El sistema ejecuta el cobro o redirige al sistema de pago seleccionado.
+            <br><br>
+            7 · El usuario recibe los creditos comprados.
+            <br><br>
+            <strong>Extensions:</strong><br><br>
+            1.a.0 - El usuario no esta loggeado<br>.
+            <br>
+            1.a.1 - Se ejecuta el caso de uso "log in".
+            <br><br>
+            3.a.0 - El usuario se equivoca de cantidad.
+            <br>
+            3.a.1 - El sistema ejecuta el paso 2.
+            <br><br>
+            5.a.0 - El usuario se equivoca de metodo de pago.
+            <br>
+            5.a.1 - El sistema vuelve al paso 4.
+            <br> <br>
+       </p>
+             <p class="rta">
+                 <br>
+            <strong>CARGAR UN JUEGO EN LA WEB</strong><br><br>
+            <strong>Use case:</strong> Cargar un juego en la WEB.
+            <br>
+            <strong>Context:</strong> El creador quiere cargar un juego en la web.
+            <br>
+            <strong>Primary actors:</strong> Creador de Juegos. 
+            <br>
+            <strong>Support actors:</strong> No hay.
+            <br><br>
+            <strong>Preconditions:</strong><br><br>
+            - Para cargar un juego en la WEB hay que tener permisos de creador.
+            <br><br>
+            - Para cargar un juego en la WEB hay que estar loggeado.
+            <br><br>
+            <strong>Succesful Postconditions:</strong><br><br>
+            - El creador ha cargado un Juego en la pagina WEB.
+            <br><br>
+            <strong>Unsuccessful postconditions:</strong><br><br>
+            - El creador no ha podido cargar un Juego en la WEB.
+            <br><br>
+            <strong>Basic Flow:</strong><br><br>
+            1 · El creador se loggea en la WEB.
+            <br><br>
+            2 · El sistema da a escoger que desea hacer.
+            <br><br>
+            3 · El creador escoge cargar Juego en la WEB.
+            <br><br>
+            4 · El sistema comprueba que el usuario es tiene permisos de creador.
+            <br><br>
+            5 · El sistema pide el Juego a cargar.
+            <br><br>
+            6 · El usuario elige el Juego.
+            <br><br>
+            7 · El sistema ejecuta la carga del juego.
+            <br><br>
+            8 · El usuario rellena la ficha con informacion detallada del Juego.
+            <br><br>
+            9 · El sistema confirma la carga del Juego.
+            <br><br>
+            10 · El usuario acepta la carga del juego y envia la informacion añadida.
+            <br>
+            <br>
+            <strong>Extensions:</strong><br><br>
+            1.a.0 - El usuario no esta loggeado.
+            <br>
+            1.a.1 - Se ejecuta el caso de uso "log in".
+            <br>
+            <br>
+            4.a.0 - El usuario no tiene permisos de creador.
+            <br>
+            4.a.1 - El sistema ejecuta el caso de uso "Make creator".
+            <br>
+            <br>
+            6.a.0 - El usuario se equivoca de Juego.
+            <br>
+            6.a.1 - El sistema ejecuta el paso 5.
+            <br>
+            <br>    
+            7.a.0 - El sistema falla en la carga del juego.
+            <br>
+            5.a.1 - El sistema vuelve al paso 2.
+            <br> 
+            <br>
+       </p>
+              <h3>Descripción de Actores y Casos de Uso.</h3>
+        <p class="rta">
+            <img src="use_actors.png">
+        </p> 
+    
+     <h3>Diagrama de Casos de Uso</h3><br>
+        <p class="rta">
+        <div class="diagram"><img src="seminari2.png"></div>
+        </p>
+        <h3>Non-functional requirements.</h3>
+        <p class="rta"><br>
+            <strong>·PRODUCTO</strong><br><br>
+                · Al cabo de 30 minutos un Usuario deberia saber al 90% el funcionamiento del sistema.<br>
+                · Dentro de cada juego habra un boton que les devuelva a la WEB para selecionar otro JUEGO.<br>
+                · La WEB tendra una barra de menús con diferentes funciones.<br>
+                · La WEB dispondra de un apartado de ayduda con un tutorial de como se usa la WEB.<br><br>
+            <strong>·ORAGNIZACIONAL</strong><br><br>
+                ·Cada dia se han de hacer pequeñas entregas de codigo funcional.<br>
+                ·El desarrollo del software estara escrito en lenguage C++ y HTML. <br>
+                ·El sistema debe der funcional en todos los Sistemas Operativos.<br><br>
+            
+            <strong>·EXTERNO</strong><br><br>
+                ·El sistema interactuara con Paypal y otros sistemas como metodo de pago.<br>
+                ·No se permite la carga de juegos de tipo "RACISTA,OFENSIVO ,SEXUALES , etc".<br>
+                ·El sistema no revelara informacion sobre los jugadores excepto su nombre y su nivel.<br><br>
+        </p>
+    </div>
+        
+   
+
+    <div class="seminari" id="cladia">          
+        
+        <h3>Diagrama de Clases.</h3><br>
+
+            <p class="diagram">
+                <img src="SEMINARI10.png">
+            </p>
+    </div>
+<div class="qui" id="quis">
+            <h1>Integrantes del grupo</h1>
+            <p class="rta qui">
+            <strong>- Nombre:</strong> Aurel Ioan
+            <br>
+            <strong>- Apellidos:</strong> Patrutiu
+            <br>
+            <strong>- NIA:</strong> 158689
+            <br>
+            <strong>- E-mail:</strong> aurelioan93@gmail.com
+            <br><br>
+            <strong>- Nombre:</strong> Marc
+            <br>
+            <strong>- Apellidos:</strong> Garcia i Mullon
+            <br>
+            <strong>- NIA:</strong> 158637
+            <br>
+            <strong>- E-mail:</strong> mgm793@gmail.com
+            <br><br>
+            </p>
+            
+            
+        </div>
+    </body>
+</html>
